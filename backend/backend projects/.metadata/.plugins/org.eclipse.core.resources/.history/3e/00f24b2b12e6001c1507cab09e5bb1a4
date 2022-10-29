@@ -1,0 +1,60 @@
+package com.foodmanagement.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.foodmanagement.dao.FoodRepository;
+import com.foodmanagement.models.Food;
+
+@RestController
+public class FoodController {
+
+	@Autowired
+	private FoodRepository employeeRepository;
+	
+	@GetMapping("/")
+	public List<Food> list() {
+		return employeeRepository.findAll();
+	}
+	
+	@GetMapping("/{id}")
+	public Food get(@PathVariable int id) {
+		return employeeRepository.findById(id).get();
+	}
+	
+	@PostMapping("/")
+	public String create(@RequestBody Food employee) {
+		if(employeeRepository.existsById(employee.getEid())) {
+			return "Employee with this id already exists";
+		}
+		employeeRepository.saveAndFlush(employee);
+		return "Employee created";
+	}
+	
+	@PutMapping("/{id}")
+	public String update(@PathVariable int id, @RequestBody Food employee) {
+		if(employeeRepository.existsById(id)) {
+			employee.setEid(id);
+			employeeRepository.save(employee);
+			return "Employee information updated";
+		}
+		return "Employee with the given id not found";
+	}
+	
+	@DeleteMapping("/{id}")
+	public String delete(@PathVariable int id) {
+		if(employeeRepository.existsById(id)) {
+			employeeRepository.deleteById(id);
+			return "Employee deleted!";
+		}
+		return "Employee with the given id not found";		
+	}
+}

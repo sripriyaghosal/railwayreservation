@@ -1,0 +1,16 @@
+#spring.datasource.url=jdbc:postgresql://localhost:5432/Rupam
+#spring.datasource.username=postgres
+#spring.datasource.password=1234
+server.port=8005
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=1234
+
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+
+#logging.level.root=INFO
+#logging.level.cg.
+#logging.file=stock_management.log

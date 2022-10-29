@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\spring-payment-paytm"/>
+			<item value="E:\Security-1"/>
+			<item value="E:\Booking"/>
+			<item value="E:\User-Admin-Service"/>
+			<item value="E:\admin-service"/>
+			<item value="E:\train-service"/>
+			<item value="E:\level2"/>
+			<item value="E:\spring-boot-microservices-entry-7fdd792bb9e2173fd053c1b36d67d7309f1f1066"/>
+			<item value="E:\spring-boot-microservices-entry-master"/>
+			<item value="C:\spring cloud level 1"/>
+			<item value="C:\Microservices_Trial1_workspace-spring-tool-suite-4-4.14.1.RELEASE"/>
+			<item value="C:\Users\ASUS\Downloads\Capgemini_Training_Project\Spring Boot App\EmployeeManagement"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="667"/>
+		<item key="x" value="720"/>
+		<item key="y" value="71"/>
+	</section>
+</section>
